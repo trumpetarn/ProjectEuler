@@ -1,0 +1,34 @@
+
+import java.lang.Math;
+
+public class euler25 {
+	public static int fibonacci(int n){
+		int[] f;
+		f = new int[n];
+		f[0]=1;
+		f[1]=1;
+		f[2]=f[1]+f[2];
+		for(int i=2; i<n; i++){
+			f[i]=f[i-1]+f[i-2];
+		}
+		int x = f[n-1];
+		return x;
+	}
+	
+	public static void main(String s[]){
+		int n=4000;
+		int digits=0;
+		int f;
+		long limit= (long) 1E99;
+		System.out.println(limit);
+		double d;
+		while (digits<=limit){
+			f=fibonacci(n);
+			d =Math.log10((double) f);
+			digits = (int) Math.floor(d);
+		}
+		System.out.println("Hej");
+	}
+	
+	
+}

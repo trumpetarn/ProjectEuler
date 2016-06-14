@@ -1,0 +1,22 @@
+function [result]=euler31()
+%http://projecteuler.net/problem=31
+result=0; % one 2 pound
+for h=0:200:200 %£2
+    for a=0:100:200 %£1
+        for b=0:50:200 %50p
+            for c=0:20:200 %20p
+                for d=0:10:200 %10p
+                    for e=0:5:200 %5p
+                        for f=0:2:200 %2p
+                            for g=0:1:200 %1p
+                                if((a+b+c+d+e+f+g+h)==200)
+                                    result=result+1;
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
