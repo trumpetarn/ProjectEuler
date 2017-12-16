@@ -1,9 +1,4 @@
-def primes(n):
-    """ Returns  a list of primes < n """
-    sieve = [True] * n
-    for i in xrange(3,int(n**0.5)+1,2):
-        if sieve[i]: sieve[i*i::2*i]=[False]*((n-i*i-1)/(2*i)+1)
-    return [2] + [i for i in xrange(3,n,2) if sieve[i]]
+import helpers.primes as primes
 
 def get_trunc(number, dir=0):
 	tmp = str(number)
@@ -17,9 +12,7 @@ def get_trunc(number, dir=0):
 				ret.append(int(tmp[0:i]))
 	return ret
 
-
-
-prime_num = primes(739398)
+prime_num = primes.primes(739398)
 trunc_sum = 0
 j = 0
 for i in reversed(prime_num[4:]):
